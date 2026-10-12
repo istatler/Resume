@@ -308,3 +308,18 @@ footer p { margin: 4px 0; }
   .card::details-content { block-size: auto; }
   .chips li { background: none; border-color: #bbb; }
 }
+
+.module:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1px;
+  margin: 16px 0 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.facts div { background: rgba(7, 8, 13, 0.6); padding: 10px 12px; }
+.facts dt { font: 0.64rem var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 2px 0 0; font-family: var(--display); font-size: 1.2rem; color: var(--yellow); text-shadow: 0 0 10px rgba(245, 233, 59, 0.35); }
+@media print { .facts dd { color: #000; text-shadow: none; } .facts div { background: #fff; } }
