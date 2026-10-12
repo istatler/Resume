@@ -70,11 +70,11 @@ h2 {
 }
 
 .job-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
-.job-head h3 { margin: 0; font-size: 1.25rem; }
+.job-head h3 { margin: 0; }
 .dates { color: var(--muted); font-size: 0.95rem; }
-.job-loc { margin: 0 0 24px; color: var(--muted); }
+.job-loc { margin: 0 0 12px; color: var(--muted); }
 
-.timeline { list-style: none; padding: 0; margin: 0; }
+.timeline { list-style: none; padding: 0; margin: 24px 0 0; }
 .timeline > li {
   display: grid;
   grid-template-columns: 64px 1fr;
@@ -127,3 +127,9 @@ footer { color: var(--muted); font-size: 0.85rem; padding-bottom: 40px; }
   .timeline > li { break-inside: avoid; padding-bottom: 14px; }
   footer { display: none; }
 }
+
+.job + .job { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
+.job > ul { margin: 0; padding-left: 18px; }
+.job > ul li { margin: 4px 0; }
+.job-head h3 { font-size: 1.1rem; }
+.job:first-of-type .job-head h3 { font-size: 1.25rem; }
