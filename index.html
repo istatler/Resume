@@ -4,151 +4,272 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jake Statler — Network Administrator</title>
-  <meta name="description" content="Jake Statler — IT infrastructure, networking, and security for the City of Rifle, Colorado.">
+  <meta name="description" content="Jake Statler — Network Administrator for the City of Rifle, Colorado. Infrastructure, networking, and security.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <h1>Jake Statler</h1>
-      <p class="role">Network Administrator · City of Rifle, Colorado</p>
-      <p class="summary">
-        IT professional with 10+ years across K-12 education, healthcare, and local government.
-        At the City of Rifle, I've modernized the municipal environment end to end:
-        virtualization, server infrastructure, network switching and firewalls, endpoint
-        security, identity, and the city's move to a <strong>.gov</strong> domain.
-      </p>
-      <nav class="contact">
-        <a href="https://www.linkedin.com/in/jake-statler-89aa1a1b6/">LinkedIn</a>
-        <!-- TODO: add email / phone if you want them public -->
-        <a href="#" onclick="window.print();return false;">Print / Save PDF</a>
-      </nav>
-    </div>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="hero wrap">
+    <p class="prompt"><span class="caret">&gt;</span> whoami</p>
+    <h1 class="glitch" data-text="JAKE STATLER">JAKE STATLER</h1>
+    <p class="role">Network Administrator <span class="sep">//</span> City of Rifle, Colorado</p>
+    <p class="summary">
+      IT professional with 10+ years across K-12 education, healthcare, and local government.
+      At the City of Rifle I've modernized the municipal environment end to end: virtualization,
+      server infrastructure, network switching and firewalls, endpoint security, identity, and the
+      city's move to a <strong>.gov</strong> domain.
+    </p>
+
+    <dl class="stats">
+      <div><dt>Years in IT</dt><dd>10+</dd></div>
+      <div><dt>Organizations</dt><dd>05</dd></div>
+      <div><dt>Major Rifle projects</dt><dd>12</dd></div>
+      <div><dt>Status</dt><dd class="online">ONLINE</dd></div>
+    </dl>
+
+    <nav class="actions">
+      <a class="btn" href="https://www.linkedin.com/in/jake-statler-89aa1a1b6/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <!-- TODO: add email if you want it public, e.g. <a class="btn" href="mailto:you@example.com">Email</a> -->
+      <button class="btn ghost" type="button" onclick="window.print()">Print / Save PDF</button>
+    </nav>
   </header>
 
   <main class="wrap">
     <section>
-      <h2>Core Skills</h2>
-      <ul class="tags">
-        <li>VMware vSphere / ESXi</li>
-        <li>VergeIO</li>
-        <li>VMware App Volumes</li>
-        <li>Windows Server 2016–2019</li>
-        <li>Active Directory &amp; Group Policy</li>
-        <li>Aruba CX Switching</li>
-        <li>Cisco</li>
-        <li>Palo Alto Firewalls</li>
-        <li>Cynet EDR / XDR</li>
-        <li>CrowdStrike</li>
-        <li>Microsoft Entra ID P1 / Conditional Access</li>
-        <li>Email &amp; DNS Migration</li>
-      </ul>
+      <h2><span class="idx">01</span> System Modules</h2>
+      <div class="modules">
+        <div class="module">
+          <h3>Virtualization</h3>
+          <ul class="chips">
+            <li>VMware vSphere / ESXi</li><li>vCenter</li><li>VMware App Volumes</li><li>VergeIO</li>
+          </ul>
+        </div>
+        <div class="module">
+          <h3>Networking</h3>
+          <ul class="chips">
+            <li>Aruba CX</li><li>Cisco</li><li>Palo Alto NGFW</li><li>LAN</li>
+          </ul>
+        </div>
+        <div class="module">
+          <h3>Security</h3>
+          <ul class="chips">
+            <li>Cynet EDR / XDR</li><li>CrowdStrike</li><li>GPO Hardening</li><li>Conditional Access</li>
+          </ul>
+        </div>
+        <div class="module">
+          <h3>Identity &amp; Systems</h3>
+          <ul class="chips">
+            <li>Active Directory</li><li>Microsoft Entra ID P1</li><li>Windows Server 2008–2019</li><li>Email &amp; DNS Migration</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Experience</h2>
-      <article class="job">
-        <div class="job-head">
-          <h3>Network Administrator — City of Rifle</h3>
-          <span class="dates">Apr 2023 – Present</span>
-        </div>
-        <p class="job-loc">Rifle, Colorado</p>
+      <div class="section-head">
+        <h2><span class="idx">02</span> Career Log</h2>
+        <button class="btn ghost small" type="button" id="toggle-all">Expand all</button>
+      </div>
+      <p class="hint">Click a card to open the full briefing.</p>
 
-        <ol class="timeline">
-          <li>
-            <span class="year">2026</span>
-            <div>
-              <h4>Hypervisor Migration &amp; .gov Domain Rebuild</h4>
-              <ul>
-                <li>Migrating the city's server infrastructure from VMware vSphere to <strong>VergeIO</strong>.</li>
-                <li>Rebuilding the entire internal Active Directory domain structure on a <strong>.gov</strong> namespace.</li>
-                <li>Migrating external email to the city's new <strong>.gov</strong> domain.</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <span class="year">2025</span>
-            <div>
-              <h4>Security Posture &amp; Endpoint Strategy</h4>
-              <ul>
-                <li>Led an internal security posture audit of Group Policy, remediating weak or outdated settings.</li>
-                <li>Transitioned users from VMware virtual desktops to physical desktops while keeping server workloads on vSphere ESXi hosts.</li>
-                <li>Migrated endpoint protection from CrowdStrike EDR to <strong>Cynet EDR/XDR</strong>.</li>
-                <li>Designed, refined, and rolled out Microsoft Entra ID P1 <strong>Conditional Access</strong> policies.</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <span class="year">2024</span>
-            <div>
-              <h4>Network &amp; Firewall Replacement</h4>
-              <ul>
-                <li>Replaced all Cisco switching across the city with <strong>Aruba CX</strong> switches.</li>
-                <li>Replaced the Cisco ASA perimeter firewall with a <strong>Palo Alto PA-1410</strong> next-generation firewall.</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <span class="year">2023</span>
-            <div>
-              <h4>Desktop &amp; Server Modernization</h4>
-              <ul>
-                <li>Migrated vCenter-hosted virtual desktops from Windows 7 to Windows 10.</li>
-                <li>Built VMware <strong>App Volumes</strong> for user profile data, replacing persistent disks.</li>
-                <li>Upgraded all server infrastructure from Windows Server 2008 / 2012 R2 to 2016–2019.</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-      </article>
+      <!-- ===== City of Rifle ===== -->
+      <details class="card" open>
+        <summary>
+          <span class="card-id">NODE_01</span>
+          <span class="card-main">
+            <span class="card-org">City of Rifle</span>
+            <span class="card-title">Network Administrator</span>
+          </span>
+          <span class="card-meta">
+            <span class="badge live">ACTIVE</span>
+            <span class="dates">Apr 2023 — Present</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <p class="overview">
+            I run network and server infrastructure for a Colorado municipality. In three years I've
+            led a full platform refresh: desktops, servers, switching, perimeter security, endpoint
+            protection, identity, and a domain migration to <strong>.gov</strong>.
+          </p>
 
-      <article class="job">
-        <div class="job-head">
-          <h3>Business Owner — Stat Strategies</h3>
-          <span class="dates">Feb 2021 – Present</span>
-        </div>
-        <p class="job-loc">Rifle, Colorado · Freelance</p>
-        <!-- TODO: describe what Stat Strategies does -->
-        <ul>
-          <li>Freelance IT services, including Active Directory and local area network administration.</li>
-        </ul>
-      </article>
+          <h4>Mission Log</h4>
+          <ol class="timeline">
+            <li>
+              <span class="year">2026</span>
+              <div>
+                <h5>Hypervisor Migration &amp; .gov Domain Rebuild</h5>
+                <ul>
+                  <li>Migrating the city's server infrastructure from VMware vSphere to <strong>VergeIO</strong>.</li>
+                  <li>Rebuilding the entire internal Active Directory domain structure on a <strong>.gov</strong> namespace.</li>
+                  <li>Migrating external email to the city's new <strong>.gov</strong> domain.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="year">2025</span>
+              <div>
+                <h5>Security Posture &amp; Endpoint Strategy</h5>
+                <ul>
+                  <li>Led an internal security posture audit of Group Policy, remediating weak or outdated settings.</li>
+                  <li>Transitioned users from VMware virtual desktops to physical desktops while keeping server workloads on vSphere ESXi hosts.</li>
+                  <li>Migrated endpoint protection from CrowdStrike EDR to <strong>Cynet EDR/XDR</strong>.</li>
+                  <li>Designed, refined, and rolled out Microsoft Entra ID P1 <strong>Conditional Access</strong> policies.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="year">2024</span>
+              <div>
+                <h5>Network &amp; Firewall Replacement</h5>
+                <ul>
+                  <li>Replaced all Cisco switching across the city with <strong>Aruba CX</strong> switches.</li>
+                  <li>Replaced the Cisco ASA perimeter firewall with a <strong>Palo Alto PA-1410</strong> next-generation firewall.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="year">2023</span>
+              <div>
+                <h5>Desktop &amp; Server Modernization</h5>
+                <ul>
+                  <li>Migrated vCenter-hosted virtual desktops from Windows 7 to Windows 10.</li>
+                  <li>Built VMware <strong>App Volumes</strong> for user profile data, replacing persistent disks.</li>
+                  <li>Upgraded all server infrastructure from Windows Server 2008 / 2012 R2 to 2016–2019.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
 
-      <article class="job">
-        <div class="job-head">
-          <h3>Board Member — Rifle Gap Land Company</h3>
-          <span class="dates">Jun 2023 – Mar 2026</span>
+          <h4>Skills Acquired</h4>
+          <ul class="chips">
+            <li>Hypervisor migration</li><li>VergeIO</li><li>vSphere / ESXi</li><li>VMware App Volumes</li>
+            <li>VDI → physical endpoint transition</li><li>Windows Server lifecycle</li>
+            <li>Aruba CX switching</li><li>Palo Alto firewall deployment</li><li>Network cutover planning</li>
+            <li>Group Policy security auditing</li><li>EDR / XDR migration</li><li>Conditional Access design</li>
+            <li>AD domain rebuild</li><li>Email domain migration</li><li>Active Directory</li><li>LAN</li>
+          </ul>
         </div>
-        <p class="job-loc">Rifle, Colorado</p>
-        <ul>
-          <li>Participated in public-private acquisition negotiations and municipal facility management.</li>
-          <li>Helped oversee the transition of the Rifle Creek Golf Course to city ownership.</li>
-        </ul>
-      </article>
+      </details>
 
-      <article class="job">
-        <div class="job-head">
-          <h3>IT Help Desk — Grand River Hospital District</h3>
-          <span class="dates">Feb 2018 – Mar 2021</span>
+      <!-- ===== Stat Strategies ===== -->
+      <details class="card">
+        <summary>
+          <span class="card-id">NODE_02</span>
+          <span class="card-main">
+            <span class="card-org">Stat Strategies</span>
+            <span class="card-title">Business Owner · Freelance</span>
+          </span>
+          <span class="card-meta">
+            <span class="badge live">ACTIVE</span>
+            <span class="dates">Feb 2021 — Present</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <!-- TODO: describe clients and services -->
+          <p class="overview">
+            Independent IT practice based in Rifle, Colorado, providing freelance Active Directory
+            and local area network administration.
+          </p>
+          <h4>Skills Acquired</h4>
+          <ul class="chips">
+            <li>Active Directory</li><li>LAN</li><li>Client management</li><li>Small business operations</li>
+          </ul>
         </div>
-        <p class="job-loc">Rifle, Colorado</p>
-        <!-- TODO: highlights -->
-      </article>
+      </details>
 
-      <article class="job">
-        <div class="job-head">
-          <h3>Building Technology Coordinator — Garfield Re-2 School District</h3>
-          <span class="dates">Mar 2016 – Feb 2018</span>
+      <!-- ===== Rifle Gap Land Company ===== -->
+      <details class="card">
+        <summary>
+          <span class="card-id">NODE_03</span>
+          <span class="card-main">
+            <span class="card-org">Rifle Gap Land Company</span>
+            <span class="card-title">Board Member · Contract</span>
+          </span>
+          <span class="card-meta">
+            <span class="dates">Jun 2023 — Mar 2026</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <p class="overview">
+            Served on the board during a public-private acquisition, with responsibilities in
+            negotiation and municipal facility management.
+          </p>
+          <h4>Mission Log</h4>
+          <ul class="bullets">
+            <li>Participated in public-private acquisition negotiations and municipal facility management.</li>
+            <li>Helped oversee the transition of the Rifle Creek Golf Course to city ownership.</li>
+          </ul>
+          <h4>Skills Acquired</h4>
+          <ul class="chips">
+            <li>Board governance</li><li>Acquisition negotiation</li><li>Public-private partnerships</li><li>Facility management</li>
+          </ul>
         </div>
-        <p class="job-loc">Garfield County, Colorado</p>
-        <!-- TODO: highlights -->
-      </article>
+      </details>
+
+      <!-- ===== Grand River Hospital District ===== -->
+      <details class="card">
+        <summary>
+          <span class="card-id">NODE_04</span>
+          <span class="card-main">
+            <span class="card-org">Grand River Hospital District</span>
+            <span class="card-title">Information Technology Help Desk</span>
+          </span>
+          <span class="card-meta">
+            <span class="dates">Feb 2018 — Mar 2021</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <!-- TODO: responsibilities, users supported, notable projects -->
+          <p class="overview">
+            Full-time IT help desk support for a hospital district in Rifle, Colorado.
+          </p>
+          <h4>Skills Acquired</h4>
+          <ul class="chips">
+            <li>Active Directory</li><li>LAN</li><li>Healthcare IT support</li><li>End-user support</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- ===== Garfield Re-2 ===== -->
+      <details class="card">
+        <summary>
+          <span class="card-id">NODE_05</span>
+          <span class="card-main">
+            <span class="card-org">Garfield Re-2 School District</span>
+            <span class="card-title">Building Technology Coordinator</span>
+          </span>
+          <span class="card-meta">
+            <span class="dates">Mar 2016 — Feb 2018</span>
+          </span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <!-- TODO: buildings covered, devices, responsibilities -->
+          <p class="overview">
+            Full-time building technology coordinator for a K-12 school district in Garfield County, Colorado.
+          </p>
+          <h4>Skills Acquired</h4>
+          <ul class="chips">
+            <li>Active Directory</li><li>LAN</li><li>K-12 technology support</li>
+          </ul>
+        </div>
+      </details>
     </section>
 
     <!-- TODO: uncomment and fill in
     <section>
-      <h2>Education &amp; Certifications</h2>
-      <ul class="plain">
+      <h2><span class="idx">03</span> Credentials</h2>
+      <ul class="bullets">
         <li><strong>Degree</strong> — School, Year</li>
         <li><strong>Certification</strong> — Issuer, Year</li>
       </ul>
@@ -157,7 +278,36 @@
   </main>
 
   <footer class="wrap">
+    <p><span class="caret">&gt;</span> end_of_transmission <span class="blink">_</span></p>
     <p>© 2026 Jake Statler</p>
   </footer>
+
+  <script>
+    (function () {
+      var cards = document.querySelectorAll('details.card');
+      var btn = document.getElementById('toggle-all');
+      function sync() {
+        var allOpen = Array.prototype.every.call(cards, function (c) { return c.open; });
+        btn.textContent = allOpen ? 'Collapse all' : 'Expand all';
+      }
+      btn.addEventListener('click', function () {
+        var open = btn.textContent === 'Expand all';
+        cards.forEach(function (c) { c.open = open; });
+        sync();
+      });
+      cards.forEach(function (c) { c.addEventListener('toggle', sync); });
+      sync();
+
+      // Print the full briefing, then restore what was open.
+      var saved = [];
+      window.addEventListener('beforeprint', function () {
+        saved = Array.prototype.map.call(cards, function (c) { return c.open; });
+        cards.forEach(function (c) { c.open = true; });
+      });
+      window.addEventListener('afterprint', function () {
+        cards.forEach(function (c, i) { c.open = saved[i]; });
+      });
+    })();
+  </script>
 </body>
 </html>

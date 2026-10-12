@@ -1,6 +1,6 @@
 # Jake Statler — Resume Website
 
-A static, dependency-free resume site (`index.html` + `style.css`).
+A static resume site (`index.html` + `style.css`) with a cyberpunk theme and expandable job cards. No build step; fonts load from Google Fonts.
 
 - Open `index.html` in a browser to preview.
 - Use the **Print / Save PDF** link to export a printable resume.
