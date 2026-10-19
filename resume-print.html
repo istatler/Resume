@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jake Statler — Resume</title>
+  <!-- Source for Jake-Statler-Resume.pdf. Keep in sync with index.html; regenerate with scripts/build-pdf.js -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #15181f;
+      --muted: #535b6b;
+      --accent: #0a7f99;
+      --accent-2: #b0168f;
+      --hi: #0a7f99;
+      --line: #d5dae3;
+      --chip: #eef7f9;
+      --chip-line: #b9dde5;
+    }
+    .dark {
+      --bg: #07080d;
+      --text: #dfe6f3;
+      --muted: #8b95ab;
+      --accent: #00f0ff;
+      --accent-2: #ff2bd6;
+      --hi: #f5e93b;
+      --line: #232b3e;
+      --chip: rgba(0, 240, 255, 0.07);
+      --chip-line: rgba(0, 240, 255, 0.3);
+    }
+    @page { size: Letter; margin: 0.5in 0.6in; }
+    /* Dark: full-bleed background; padding repeats on every page instead of page margins */
+    @page dark { margin: 0; }
+    .dark body { page: dark; padding: 0.5in 0.6in; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { color: var(--text); font: 9.6pt/1.42 "Chakra Petch", system-ui, sans-serif; }
+    strong { font-weight: 600; }
+
+    header { display: grid; grid-template-columns: 1fr auto; gap: 4px 24px; align-items: end; padding-bottom: 10px; border-bottom: 2px solid var(--accent); position: relative; }
+    header::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 90px; height: 2px; background: var(--accent-2); }
+    h1 { margin: 0; font: 800 26pt/1 "Orbitron", sans-serif; letter-spacing: 0.04em; }
+    .dark h1 { color: #fff; text-shadow: 0 0 14px rgba(0, 240, 255, 0.35); }
+    .role { margin: 6px 0 0; font: 600 10pt "JetBrains Mono", monospace; color: var(--accent); }
+    .role span { color: var(--accent-2); }
+    .contact { text-align: right; font: 8.4pt/1.6 "JetBrains Mono", monospace; color: var(--muted); }
+    .contact a { color: var(--accent); text-decoration: none; }
+
+    .summary { margin: 10px 0 0; color: var(--text); }
+
+    h2 { display: flex; align-items: center; gap: 8px; margin: 14px 0 7px; font: 600 9pt "Orbitron", sans-serif; letter-spacing: 0.16em; text-transform: uppercase; }
+    h2 .idx { font: 600 7.5pt "JetBrains Mono", monospace; color: var(--accent-2); }
+    h2::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--accent-2), transparent); }
+
+    .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 22px; }
+    .skills div { display: grid; grid-template-columns: 112px 1fr; }
+    .skills dt { font: 600 7.2pt/1.9 "JetBrains Mono", monospace; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+    .skills dd { margin: 0; }
+
+    .job { margin: 0 0 11px; break-inside: auto; }
+    .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; break-after: avoid; }
+    .job-head h3 { margin: 0; font: 600 11pt "Orbitron", sans-serif; letter-spacing: 0.02em; }
+    .dark .job-head h3 { color: #fff; }
+    .job-head h3 em { font: 500 9.6pt "Chakra Petch", sans-serif; color: var(--accent); margin-left: 6px; }
+    .dates { font: 8pt "JetBrains Mono", monospace; color: var(--muted); white-space: nowrap; }
+    .overview { margin: 3px 0 5px; color: var(--muted); break-after: avoid; }
+
+    .year { display: grid; grid-template-columns: 42px 1fr; gap: 10px; margin: 6px 0 0; break-inside: avoid; }
+    .year > span { align-self: start; text-align: center; font: 600 7.6pt/16px "JetBrains Mono", monospace; color: var(--bg); background: var(--accent); }
+    .year h4 { margin: 0 0 1px; font-size: 9.8pt; font-weight: 600; }
+
+    ul { margin: 0; padding-left: 14px; }
+    li { margin: 1.5px 0; }
+    li::marker { content: "▸ "; color: var(--accent); font-size: 8pt; }
+
+    .facts { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 2px 0 4px; font: 7.8pt "JetBrains Mono", monospace; color: var(--muted); }
+    .facts b { color: var(--hi); font-weight: 600; }
+
+    .tags { margin: 5px 0 0; display: flex; flex-wrap: wrap; gap: 3px; }
+    .tags span { font: 7pt "JetBrains Mono", monospace; padding: 1px 6px; background: var(--chip); border: 1px solid var(--chip-line); }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>JAKE STATLER</h1>
+      <p class="role">Network Administrator <span>//</span> City of Rifle, Colorado</p>
+    </div>
+    <div class="contact">
+      Rifle, Colorado<br>
+      <a href="https://www.linkedin.com/in/jake-statler-89aa1a1b6/">linkedin.com/in/jake-statler-89aa1a1b6</a>
+    </div>
+  </header>
+
+  <p class="summary">
+    Self-taught IT professional with 10+ years across K-12 education, healthcare, and local government.
+    At the City of Rifle I've modernized the municipal environment end to end: virtualization, server
+    infrastructure, network switching and firewalls, endpoint security, identity, disaster recovery, and the
+    city's move to a <strong>.gov</strong> domain.
+  </p>
+
+  <h2><span class="idx">01</span> Core Skills</h2>
+  <dl class="skills">
+    <div><dt>Virtualization</dt><dd>VMware vSphere / ESXi, vCenter, App Volumes, VergeIO</dd></div>
+    <div><dt>Networking</dt><dd>Aruba CX, Cisco, Palo Alto NGFW, LAN</dd></div>
+    <div><dt>Security</dt><dd>Cynet EDR/XDR, CrowdStrike, GPO hardening, Conditional Access, Disaster recovery</dd></div>
+    <div><dt>Identity &amp; Systems</dt><dd>Active Directory, Entra ID P1, Windows Server 2008–2019, Email &amp; DNS migration</dd></div>
+    <div><dt>Endpoints</dt><dd>Quest KACE K2000, OS imaging, macOS, Chromebook, iPad, hardware repair</dd></div>
+    <div><dt>Collaboration</dt><dd>SharePoint administration, user provisioning</dd></div>
+  </dl>
+
+  <h2><span class="idx">02</span> Experience</h2>
+
+  <section class="job">
+    <div class="job-head">
+      <h3>City of Rifle <em>Network Administrator</em></h3>
+      <span class="dates">Apr 2023 — Present</span>
+    </div>
+    <p class="overview">
+      I run network and server infrastructure for a Colorado municipality, and have led a full platform refresh:
+      desktops, servers, switching, perimeter security, endpoint protection, identity, and a domain migration to .gov.
+    </p>
+    <div class="year"><span>2026</span><div>
+      <h4>Hypervisor Migration, .gov Domain Rebuild &amp; Disaster Recovery</h4>
+      <ul>
+        <li>Migrating the city's server infrastructure from VMware vSphere to <strong>VergeIO</strong>.</li>
+        <li>Rebuilding the entire internal Active Directory domain structure on a <strong>.gov</strong> namespace, and migrating external email to the new .gov domain.</li>
+        <li>Leading the city's <strong>disaster recovery</strong> planning, including a documented plan to recover from data loss and remediate it.</li>
+        <li>Designing DR infrastructure around a <strong>3-2-1 backup</strong> strategy: three copies of city data, kept across two sites, with one copy offsite.</li>
+      </ul>
+    </div></div>
+    <div class="year"><span>2025</span><div>
+      <h4>Security Posture &amp; Endpoint Strategy</h4>
+      <ul>
+        <li>Led an internal security posture audit of Group Policy, remediating weak or outdated settings.</li>
+        <li>Transitioned users from VMware virtual desktops to physical desktops while keeping server workloads on vSphere ESXi.</li>
+        <li>Migrated endpoint protection from CrowdStrike EDR to <strong>Cynet EDR/XDR</strong>.</li>
+        <li>Designed, refined, and rolled out Microsoft Entra ID P1 <strong>Conditional Access</strong> policies.</li>
+      </ul>
+    </div></div>
+    <div class="year"><span>2024</span><div>
+      <h4>Network &amp; Firewall Replacement</h4>
+      <ul>
+        <li>Replaced all Cisco switching across the city with <strong>Aruba CX</strong> switches.</li>
+        <li>Replaced the Cisco ASA perimeter firewall with a <strong>Palo Alto PA-1410</strong> next-generation firewall.</li>
+      </ul>
+    </div></div>
+    <div class="year"><span>2023</span><div>
+      <h4>Desktop &amp; Server Modernization</h4>
+      <ul>
+        <li>Migrated vCenter-hosted virtual desktops from Windows 7 to Windows 10.</li>
+        <li>Built VMware <strong>App Volumes</strong> for user profile data, replacing persistent disks.</li>
+        <li>Upgraded all server infrastructure from Windows Server 2008 / 2012 R2 to 2016–2019.</li>
+      </ul>
+    </div></div>
+  </section>
+
+  <section class="job">
+    <div class="job-head">
+      <h3>Stat Strategies <em>Founder &amp; Owner · Freelance</em></h3>
+      <span class="dates">Feb 2021 — Present</span>
+    </div>
+    <p class="overview">A self-funded IT consultancy that helps small businesses in Rifle run their own technology well, without outsourcing everything and paying a markup for it.</p>
+    <ul>
+      <li>Developed a data-driven daily fantasy sports strategy in 2021 that returned <strong>$150K+</strong> in its first year, then used it to self-fund the business.</li>
+      <li>Help local small businesses set up better IT management and day-to-day operations.</li>
+      <li>Give clients direct access to the tools and software they need, so they don't depend on outsourced providers who mark up every service.</li>
+    </ul>
+  </section>
+
+  <section class="job">
+    <div class="job-head">
+      <h3>Rifle Gap Land Company <em>Board Member · Rifle Creek Golf Course</em></h3>
+      <span class="dates">Jun 2023 — Mar 2026</span>
+    </div>
+    <p class="overview">Board member of the nonprofit that operated the Rifle Creek Golf Course. I helped build the case that brought the course and its water rights into city ownership.</p>
+    <div class="facts"><span>Acreage <b>340</b></span><span>Water rights <b>~$970K</b></span><span>Legacy debt <b>~$1.2M</b></span><span>Rounds / year <b>~26K</b></span></div>
+    <ul>
+      <li>Oversaw golf course operations, including staffing, budget, and long-term strategic planning, within the limits of a ~$1.2M note from the early-2000s clubhouse construction.</li>
+      <li>Coordinated with city officials to set up meetings and build the case for a city purchase.</li>
+      <li>Showed the value of the property: 340 acres outside city limits with <strong>senior water rights</strong> worth ~$970K. Also showed that ~26K rounds a year plus a new irrigation system could comfortably cover the note.</li>
+      <li>Helped oversee the transition of the Rifle Creek Golf Course to city ownership.</li>
+    </ul>
+  </section>
+
+  <section class="job">
+    <div class="job-head">
+      <h3>Grand River Hospital District <em>IT Help Desk</em></h3>
+      <span class="dates">Feb 2018 — Mar 2021</span>
+    </div>
+    <ul>
+      <li>Helped roll out the <strong>Quest KACE K2000</strong> imaging solution, and built and configured the imaging station.</li>
+      <li>Managed the organization's <strong>SharePoint</strong> intranet.</li>
+      <li>Owned new-user provisioning and account management in Active Directory, and provided day-to-day help desk support for clinical and administrative staff.</li>
+    </ul>
+  </section>
+
+  <section class="job">
+    <div class="job-head">
+      <h3>Garfield Re-2 School District <em>Building Technology Coordinator</em></h3>
+      <span class="dates">Mar 2016 — Feb 2018</span>
+    </div>
+    <ul>
+      <li>Served as the escalation point for any issue the help desk couldn't resolve, across <strong>five schools</strong>.</li>
+      <li>Repaired Chromebooks (keyboard, screen, and trackpad replacements), replaced iPad screens, and repaired and re-imaged Macs.</li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>
